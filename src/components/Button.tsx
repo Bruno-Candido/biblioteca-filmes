@@ -9,7 +9,7 @@ export function Button({ title, ...rest}: Props){
         <ButtonNativeBase
             w={70}
             h={16}
-            rounded='sm'
+            rounded={50}
             fontSize='md'
             textTransform='uppercase'
             bg='primary.500'
