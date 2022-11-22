@@ -16,6 +16,7 @@
     "expo": "~47.0.6",
     "expo-status-bar": "~1.4.2",
     "native-base": "^3.4.22",
+    "phosphor": "^0.7.1",
     "phosphor-react-native": "^1.1.2",
     "react": "18.1.0",
     "react-native": "0.70.5",

@@ -1,5 +1,5 @@
 import { Text, HStack, Box } from 'native-base'
-import { CaretLeft, ArrowCircleLeft, Export } from 'phosphor-react-native'
+import { ArrowCircleLeft, Export } from 'phosphor-react-native'
 
 import { ButtonIcon } from '../components/ButtonIcon'
 

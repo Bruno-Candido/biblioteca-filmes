@@ -1,15 +1,17 @@
 import { VStack, HStack, Box, Text, FlatList } from 'native-base'
+import { Image } from 'react-native'
 import { useState, useEffect } from 'react'
 
 import { Button } from '../components/Button'
 import { Input } from '../components/Input'
 import { Header } from '../components/Header'
+import { MovieCards, CardProps } from '../components/MovieCards'
 
 const apiKey = 'api_key=7584a3b6e16494f61507c8edc2047273'
 const moviesUrl = 'https://api.themoviedb.org/3/movie/'
 
 export function Search(){
-    const [topMovies, setTopMovies] = useState([])
+    const [topMovies, setTopMovies] = useState<CardProps[]>([])
 
     const getTopMovies = async (url) => {
         const response = await fetch(url)
@@ -22,9 +24,6 @@ export function Search(){
         const topMovieUrl = `${moviesUrl}top_rated?${apiKey}`
 
         getTopMovies(topMovieUrl)
-        console.log('---------------carregou-------------------')
-        console.log(topMovies)
-        console.log('---------------finalizou-------------------')
     }, [])
 
     return(
@@ -35,12 +34,13 @@ export function Search(){
                 <Input placeholder='Titúlo do filme'/>
                 <Button title='Buscar'/>
             </HStack>
+            <Text color='primary.100' size='3xl'>B R N</Text>
             <VStack>
-            <Box>
-                <FlatList data={topMovies.map((movie) => movie.title)}
+{/*                 <Box>
+                <FlatList data={topMovies.map((movie) => movie)}
                     keyExtractor={item => item.id}
-                    renderItem={({ item }) => <Text>{item}</Text>}/>
-                </Box>
+                    renderItem={({ item }) => <MovieCards data={item}/>}/>
+                </Box> */}
             </VStack>
         </VStack>
     )
