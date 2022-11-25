@@ -3,7 +3,7 @@ import {FilmStrip, Info } from 'phosphor-react-native'
 import { useTheme } from 'native-base'
 
 import { Search } from '../screens/Search'
-import { List } from '../screens/List'
+import { ListMovie } from '../screens/ListMovie'
 import { About } from '../screens/About'
 
 const { Navigator, Screen } = createBottomTabNavigator()
@@ -37,10 +37,10 @@ export function AppRoutes(){
                 options={{
                     tabBarIcon:({ color }) => <Info color={color}/>
                 }}
-            />
+            /> 
             <Screen
-                name='list' 
-                component={List}
+                name='listmovie' 
+                component={ListMovie}
                 options={{ tabBarButton: () => null }}
             />
 
