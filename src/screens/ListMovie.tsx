@@ -1,6 +1,6 @@
-import { HStack, VStack, Text} from 'native-base'
-import { useRoute, useFocusEffect} from '@react-navigation/native'
-import { useState, useEffect, useCallback } from 'react'
+import {  VStack } from 'native-base'
+import { useRoute} from '@react-navigation/native'
+import { useState, useEffect } from 'react'
 
 import { Header } from '../components/Header'
 import { MovieDetails, ListProps } from '../components/MovieDetails'
@@ -12,7 +12,7 @@ interface RouteParams {
 
 export function ListMovie(){
     const route = useRoute()
-    const { id, title} = route.params as RouteParams
+    const { id } = route.params as RouteParams
     const [ getDetails, setGetDetails] = useState<ListProps>({} as ListProps)
 
     const movieDetails = async (url) => {
